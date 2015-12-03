@@ -87,17 +87,6 @@ class Player extends Dynamic {
     ellipse(x, y, size, size);
     noStroke();
 
-    if (this.weapon!=null) {
-      if (this.weapon instanceof Sword)
-      {
-        imgRender(imgFrame, width-imgFrame.width*4, 0, 4);
-        imgRender(imgSword, width-imgSword.width*4-8, 8, 4);
-      }
-      if (this.weapon instanceof Axe)
-      {
-        imgRender(imgFrame, width-imgFrame.width*4, 0, 4);
-        imgRender(imgAxe, width-imgAxe.width*4-8, 8, 4);
-      }
-    }
+    
   }
 }

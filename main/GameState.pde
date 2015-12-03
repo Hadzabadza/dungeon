@@ -78,6 +78,19 @@ class Game extends GameState {
     void draw() {
         background(45, 45, 45);
         this.level.draw();
+        //draws all weapons
+        if (this.level.player.weapon!=null) {
+      if (this.level.player.weapon instanceof Sword)
+      {
+        imgRender(imgFrame, width-imgFrame.width*4, 0, 4);
+        imgRender(imgSword, width-imgSword.width*4-8, 8, 4);
+      }
+      if (this.level.player.weapon instanceof Axe)
+      {
+        imgRender(imgFrame, width-imgFrame.width*4, 0, 4);
+        imgRender(imgAxe, width-imgAxe.width*4-8, 8, 4);
+      }
+    }
 
         // DEBUG: mouseover grid numbers (only works when no grid offset)
         // fill(255, 204, 102);
