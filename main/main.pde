@@ -15,6 +15,7 @@ void setup() {
 
     menu.load();
     game.load();
+    imgLoad();
     state = menu;
 }
 
