@@ -1,7 +1,7 @@
 //Image renderer/resizer for all sprites used. Images are drawn from the left top corner.
 
 
-PImage imgPotion, imgFrame, imgBlip, tileWood, imgSword, imgPickaxe, imgAxe, imgHammer=null;
+PImage imgPotion, imgFrame, imgBlip, tileWood, imgSword, imgPickaxe, imgAxe, imgHammer,prt1=null;
 int wpnImgCount=0;
 PImage[] wpnImg;
 
@@ -14,7 +14,8 @@ void imgLoad() {
   imgPickaxe=loadImage("Pickaxe.png");
   tileWood=loadImage("Wood_tile.png");
   imgBlip=loadImage("Blip.png");
-
+  prt1=loadImage("HealSFX.png");
+  //file read system
   /*String lines[] = loadStrings("Items.txt");
   println("there are " + lines.length + " lines");
   for (int i = 0; i < lines.length; i++) {

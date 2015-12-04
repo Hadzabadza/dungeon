@@ -33,8 +33,15 @@ class HealthPotion extends Item {
     this.heal = heal;
   }
   void onUse(Dynamic d) {
-    d.health += this.heal;
+    if (d.health<=d.maxHealth-heal)
+    {
+      d.health += this.heal;
+    } else
+    {
+      d.health=d.maxHealth;
+    }
     tile.item=null;
+    createParticles(prt1, game.level.player.x*game.level.grid.tileSize, game.level.player.y*game.level.grid.tileSize);
   }
 
   void draw(int x, int y, int size) {
